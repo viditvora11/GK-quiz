@@ -135,8 +135,8 @@ gkquiz =[
      ],
 ]
 
-q_number=[i for i in range(len(gkquiz))]#using for the user if they want to play the quiz again.
-shuffle(q_number)
+q_number=[i for i in range(len(gkquiz))]#using while lenf or the user if they want to play the quiz again.
+shuffle(q_number)#using shuffle to randomize the questions
 
 index = 0
 score = 0
