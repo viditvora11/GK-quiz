@@ -26,9 +26,3 @@ while True:
 
 #printing all users details 
 print("Hello",name,"your age is",age)
-
-'''
-check if works
-normal works
-errors not trapped
-'''
