@@ -15,4 +15,3 @@ yearlvl = input("Please enter your year level here : ")
 
 #printing all users details 
 print("Hello",name,"your age is",age,"and you are in year",yearlvl)
-
