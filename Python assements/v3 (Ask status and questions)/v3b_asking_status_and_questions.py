@@ -13,7 +13,7 @@ def status():
         exit()
 status()#Calling the function
 
-#using dictionary for the question and the right answer to them
+#Using dictionary and lists for storing questions, right answers and options. 
 gkquiz =[
 [
     "What is the difference in the number of stars in australia's flag and new zealand's flag",
@@ -102,12 +102,12 @@ index = 0
 score = 0
 optnum = 0
 
-while len(gkquiz)>0:
+while len(gkquiz)>0: 
     data = gkquiz[0]
-    q = data[0]
+    q = data[0]#questions from the list
     data = data[1]
-    answer = data['answer']
-    option = data['option']
+    answer = data['answer'] #Right answers from the list
+    option = data['option'] #options from the list
 
     print(q)
     print(option)
