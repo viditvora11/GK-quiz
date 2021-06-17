@@ -16,32 +16,33 @@ def greet():#using def to call the function many times easily.
    
 
 #Asking if they want to know the quiz rules. 
-def rule():
+def rule():#using def function
     rule = input("\nDo you want to read the rules or continue without the rules? \nPress y to learn the rules or any other key to continue without knowing the rules : ").lower()
-    rule = rule.replace(' ','')
-    if rule == "y" or rule == "yea" or rule == "yes":
+    rule = rule.replace(' ','')#Using .replace to allow spaces
+    if rule == "y" or rule == "yea" or rule == "yes":#using if function
         print("\nThe basic rules are as follows \n1. Enter the answer in a,b,c,d.\n2. press a,b,c,d if you don't know the answer.\n3. You are not allowed to use help of internet\n4. You can work with people but then the score will be your and the person you playing with.\nThe following options are just help for you.\nRead the question and the options multiple times.\nPress enter after your input.\nIf you score 100% you will win 100 flybuys points.")
-    else:
+    else:#Using else with the else function
         print("You may continue without the rules.")
 
 #Asking thier status and if they want to keep going
-def status():
+def status(): #using def function
     status = input("\nAre you ready for testing your general knowlage through our quiz? \nPress y to continue or any other key to exit :  ").lower()
-    status = status.replace(' ','')
-    if status == "y" or status == "yea" or status == "yes":
+    status = status.replace(' ','')#Using .replace to allow spaces
+    if status == "y" or status == "yea" or status == "yes":#using if function
         print("\nThank you for choosing our quiz for testing your general knowlage lets keep goings")
-    else:
+    else:#Using else with the else function
         print("\nThank you please play the quiz again you can email me at 19022@students.mrgs.school.nz\nif you want to challange me to make another quiz or change something in the quiz.")
         exit()
 
-def rounds():
-    global r , total
-    while True:
+def rounds():#using def function
+    global r , total#using global so that we can use it out of def function
+    while True:#Using while true loop
+        #using try and except function
         try:
             r = int(input("\nPlease enter how many rounds do you want to play there are a total of 20 round at max. : "))
-            if 0<r<=20:#not allowing more than 20 and less than 1 
-                break
-            else:
+            if 0<r<=20:#not allowing more than 20 and less than 1 #using if function
+                break#breaking the while true loop
+            else:#Using else function
                 print("Please enter the rounds in 1-20 only")
         except:
             print('Please enter rounds in numbers only (The max is 20)')
@@ -52,7 +53,7 @@ def rounds():
     total=r
 
     
-#using dictionary for the question and the right answer to them
+#using dictionary and list for using question, option and right answer.
 gkquiz =[
 [
     "\nWhat is the difference in the number of stars in australia's flag and new zealand's flag",
@@ -139,7 +140,7 @@ q_number=[i for i in range(len(gkquiz))]#using while lenf or the user if they wa
 shuffle(q_number)#using shuffle to randomize the questions
 
 index = 0
-score = 0
+score = 0 #Starting score
 optnum = 0
 
    
@@ -163,7 +164,7 @@ status()
 
 
 
-while True:
+while True:#Using while true loop
     while r>0:#using for range which is better than while len
         data = gkquiz[q_number[0]]
         q = data[0]
@@ -173,8 +174,8 @@ while True:
 
         print(q)#printing questions
         print(option)#printing options
-        while True:
-            user_answer = input("Please enter your answer here : ").lower().replace(' ','')
+        while True:#Using while true loop
+            user_answer = input("Please enter your answer here : ").lower().replace(' ','')#allowing spaces and capital
             if user_answer == 'a' or user_answer == 'b' or user_answer == 'c' or user_answer == 'd':
                 if user_answer == answer: #checking answers
                     print("===============================")
